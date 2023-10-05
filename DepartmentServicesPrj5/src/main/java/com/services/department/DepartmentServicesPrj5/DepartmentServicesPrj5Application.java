@@ -13,7 +13,7 @@ public class DepartmentServicesPrj5Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DepartmentServicesPrj5Application.class, args);
-		System.out.println("Department Service");
+		System.out.println("Department Servicedfsdfsdf");
 	}
 
 }
