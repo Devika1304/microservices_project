@@ -1,5 +1,8 @@
 package com.services.department.DepartmentServicesPrj5.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,11 +26,27 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public Department saveDepartment(Department department) {
 				 return departmentRepository.save(department);
 	}
-
+	
+	
+	public List<Department> getAllDept()   
+	{  
+	List<Department> dept = new ArrayList<Department>();  
+	departmentRepository.findAll().forEach(dept1 -> dept.add(dept1));  
+	return dept;  
+	}
 	@Override
 	public Department getDepartmentById(Long departmentId) {
 		// TODO Auto-generated method stub
 		return departmentRepository.findById(departmentId).get();
+	}
+
+	
+    public void delete(Long id) {
+    	departmentRepository.deleteById(id);
+      }
+
+	public  Department updateDepartmentRecord(Department department){    
+	         return departmentRepository.save(department);
 	}
 
 	
