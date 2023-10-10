@@ -58,7 +58,7 @@ public class DepartmentController {
 	  
     	 
       @PutMapping("/update")
-      public ResponseEntity<Department> updateStudentRecord(@RequestBody Department request)
+      public ResponseEntity<Department> updateDepartmentRecord(@RequestBody Department request)
       {
     	  return new ResponseEntity<>(departmentService.updateDepartmentRecord(request), HttpStatus.CREATED);
 	  }
